@@ -1,0 +1,29 @@
+<div class="container grid-center">
+    
+    <h1 class="col-12" mat-title>Pokedex <img style="height: 50px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDPhd-tdrlDM42QuUaC6jdS1199DpGZDMus1iLK-T0mg&s"></h1>
+    <div class="col-12 grid">
+        <mat-form-field class="col-10" appearance="outline">
+            <mat-label>Pokemon:</mat-label>
+            <input matInput style="font-weight: bold; color: black;" [(ngModel)]="searchQuery" placeholder="Buscar pokemon por nombre o ID">
+        </mat-form-field>
+        
+        <button class="col-2" mat-icon-button (click)="searchPokemon()" color="basic">
+            <mat-icon>search</mat-icon>
+          </button>
+    </div>
+    
+    
+    <mat-card class="col-12" *ngIf="pokemon">
+        <mat-card-header>
+            <h3>
+                <mat-card-title>
+                    No.{{pokemon.id}}
+                    {{ pokemon.name }}</mat-card-title>
+            </h3>
+        </mat-card-header>
+        <img mat-card-image [src]="pokemon.sprites.front_default" alt="Pokemon Image" (click)="openDetailsDialog()">
+    </mat-card>
+</div>
+
+
+

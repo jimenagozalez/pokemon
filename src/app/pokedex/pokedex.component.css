@@ -1,0 +1,24 @@
+.container{
+    padding: 10%;
+    background-color: rgb(227, 1, 1);
+    text-align: center;
+    display: grid;
+    align-items: center;
+    h1{
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+    }
+    mat-card{
+        background-color: rgb(172, 243, 172);
+        mat-card-header{
+            background-color: rgb(255, 213, 3);
+           justify-content: center;
+           text-transform:capitalize;
+           border-bottom: 2px solid rgb(255, 0, 0);
+        }
+    
+      width: 500px;  
+    }
+}

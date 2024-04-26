@@ -1,0 +1,23 @@
+
+  <div mat-dialog-actions align = "end">
+    <button mat-icon-button [mat-dialog-close]="true"><mat-icon>close</mat-icon></button>
+  </div>
+  <div style="background-color: red; padding: 50px; border: 2px solid black;">
+  <h2 mat-dialog-title align="center" style="border: 1px solid black; background-color: rgb(205, 242, 151);">No.{{data.id}}: {{ data.name }}</h2>
+  <div mat-dialog-content style="background-color: lightgreen; border: 2px green solid;">
+    <div align="center">
+      <img height="250px" [src]="data.sprites.front_default">
+    </div>
+    
+    <p><strong>Habilidades:</strong></p>
+    <div *ngFor='let element of data.abilities'>
+      <a class="grid-middle" style="border: 1px solid blue;background-color: aqua; margin-bottom: 6px;"><strong class="col-12" align="center">{{element.ability.name}}</strong></a>
+    </div>
+    <p><strong>Tipo:</strong></p>
+    <div *ngFor='let element of data.types'>
+      <a class="grid-middle" style="border: 1px solid rgb(80, 0, 123);background-color: rgb(238, 205, 255); margin-bottom: 6px;"><strong class="col-12" align="center">{{ element.type.name}}</strong></a>
+    </div>
+    
+  </div>
+</div>
+
